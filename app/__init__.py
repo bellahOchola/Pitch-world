@@ -29,9 +29,9 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     # flask extensions
-    bootstrap.init_app(app)
-    db.init_app(app)
-    login_manager.init_app(app)
-    csrf.init_app(app)
+    # bootstrap.init_app(app)
+    # db.init_app(app)
+    # login_manager.init_app(app)
+    # csrf.init_app(app)
 
     return app
