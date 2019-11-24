@@ -28,10 +28,10 @@ def create_app(config_name):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-    # flask extensions
-    # bootstrap.init_app(app)
-    # db.init_app(app)
-    # login_manager.init_app(app)
-    # csrf.init_app(app)
+    flask extensions
+    bootstrap.init_app(app)
+    db.init_app(app)
+    login_manager.init_app(app)
+    csrf.init_app(app)
 
     return app
