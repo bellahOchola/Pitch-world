@@ -11,9 +11,9 @@ background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_
                     <h3>{{categ.pitch_title}}</h3>
                     <hr>
                     <div class="card-body">
-                        <p>{{categ.pitch_content}}</p>
-                        <p>Category:{{categ.pitch_category}}</p>
-                        <footer class="blockquote-footer">Posted by: {{categ.user.username}}</footer>
+                        <p><i>{{categ.pitch_content}}<i></p>
+                        <p><b>Category:</b>{{categ.pitch_category}}</p>
+                        <footer class="blockquote-footer"><b>Posted by:</b> {{categ.user.username}}</footer>
                         <hr>
                         <a href="{{url_for('.comment',pitch_id = categ.id)}}" class="btn btn-primary btn-sm"> Comment</a>
 
