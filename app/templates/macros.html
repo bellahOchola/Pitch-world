@@ -1,14 +1,18 @@
+
 {% macro display(pitches) %}
-<div class="container-fluid">
+<body style=" background-repeat:no-repeat; background-size:cover; 
+background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_960_720.jpg');">
+    <div class="container-fluid">
 		<div class="row">
             {% for categ in pitches %}
-            <div class="col-md-4" >
-                <div class="thumbnail" id="carded">
+            <div class="col-md-3" style=" margin-left: 20px; padding: 20px;
+            margin-bottom: 20px; border:none; font-size: 18px; width: 30%; height:50%;">
+                <div class="thumbnail">
                     <h3>{{categ.pitch_title}}</h3>
                     <div class="card-body">
                         <p>{{categ.pitch_content}}</p>
-                        <p> Category: {{categ.pitch_category}}</p>
-                        <footer class="blockquote-footer"> Posted by: {{categ.user.username}}</footer>
+                        <p>Category:{{categ.pitch_category}}</p>
+                        <footer class="blockquote-footer">Posted by: {{categ.user.username}}</footer>
                         <a href="{{url_for('.comment',pitch_id = categ.id)}}" class="btn btn-primary btn-sm"> Comment</a>
 
                     </div>
@@ -18,4 +22,6 @@
     </div>
 </div>
 {% endmacro %}
-					
+	
+</body>
+				

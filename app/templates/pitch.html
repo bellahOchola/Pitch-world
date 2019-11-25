@@ -2,16 +2,18 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {% block content %}
-<div class="container">
-<div class="row">
-<div class="col-md-2"> </div>
-<div class="col-md-8">
-
-{{wtf.quick_form(pitch_form)}}
-
-</div>
-<div class="col-md-2"></div>
-</div>
-</div>
-
+<body style=" background-repeat:no-repeat; background-size:cover; 
+background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_960_720.jpg'); color:white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+            
+            {{wtf.quick_form(pitch_form)}}
+            
+            </div>
+            <div class="col-md-2"></div>
+            </div>
+    </div>
+</body>
 {% endblock%}
