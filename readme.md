@@ -11,7 +11,8 @@ This app simply allows creative users enter a given pitch that they have in mind
 * run it on the terminal.
 ## BDD
 | Behaviour | Output |
-| clone the repo to your terminal and open in browser| the landing page with the different categories of pitches  |
+| :---------------- | :---------------: |
+| clone the repo to your terminal and open in browser | the landing page with the different categories of pitches  |
 ## Technologies Used
 * Flask - used in the creation of the app.
 ## Support and contact details
