@@ -6,13 +6,15 @@ background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_
 		<div class="row">
             {% for categ in pitches %}
             <div class="col-md-3" style=" margin-left: 20px; padding: 20px;
-            margin-bottom: 20px; border:none; font-size: 18px; width: 30%; height:50%;">
-                <div class="thumbnail">
+            margin-bottom: 20px; border:none; font-size: 15px; width: 40%; ">
+                <div class="thumbnail" style="height:100%;">
                     <h3>{{categ.pitch_title}}</h3>
+                    <hr>
                     <div class="card-body">
                         <p>{{categ.pitch_content}}</p>
                         <p>Category:{{categ.pitch_category}}</p>
                         <footer class="blockquote-footer">Posted by: {{categ.user.username}}</footer>
+                        <hr>
                         <a href="{{url_for('.comment',pitch_id = categ.id)}}" class="btn btn-primary btn-sm"> Comment</a>
 
                     </div>

@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 from . import main
 from .. import db
 from .forms import PitchForm, CommentForm
-from ..models import Pitches
+from ..models import Pitches,Comment
 
 @main.route('/')
 def index():

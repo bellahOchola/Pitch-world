@@ -4,9 +4,10 @@ from flask import Flask
 from config import config_options
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
+from flask_mail import Mail
 
 
-
+mail = Mail()
 csrf = CSRFProtect()
 bootstrap = Bootstrap()
 db = SQLAlchemy()
@@ -33,5 +34,6 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     csrf.init_app(app)
+    mail.init_app(app)
 
     return app
