@@ -1,1 +1,38 @@
 {% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+    
+        <div  class="container">
+                <h2 class="text-center" >Pitches</h2>
+            <ul class="nav nav-pills nav-justified nav-fill" role="tablist">
+                <li class="nav-item" >
+                    <a id ="cats" class="nav-link" data-toggle="tab" href="#pitch"><strong>All Pitches</strong> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  data-toggle="tab" href="#promotion">Promotion Pitches</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#product">Product Pitches</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#pick">Pickup-Lines Pitches</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div  class="container active" id="pitch"><br>
+                    {{ macro.display(pitches) }}
+                </div>
+                <div  class="container" id="product"><br>
+                    {{ macro.display(product)}}
+                </div>
+                <div  class="container" id="promotion"><br>
+                    {{ macro.display(promotion) }}
+                </div>
+                <div  class="container" id="pick"><br>
+                    {{ macro.display(pickup) }}
+                    
+                </div>
+            </div>
+        </div>
+{% endblock%}
