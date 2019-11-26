@@ -2,7 +2,12 @@ import os
 
 class Config:
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://christabel:bellah@1972@localhost/pitching'
-    pass
+    # email configurations
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
 
 class ProdConfig(Config):
     '''
@@ -13,6 +18,7 @@ class ProdConfig(Config):
     '''
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     # pass
+
 class DevConfig(Config):
     '''
     Development  configuration child class
@@ -28,9 +34,3 @@ config_options = {
 'production':ProdConfig
 }
 
-# email configurations
-MAIL_SERVER = 'smtp.googlemail.com'
-MAIL_PORT = 12397
-MAIL_USE_TLS = True
-MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
