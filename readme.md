@@ -8,6 +8,8 @@ This app simply allows creative users enter a given pitch that they have in mind
 * Installation of virtual environment
 * pip install flask, flask_login
 * pip install flask_bootstrap, flask-migrate
+## Live Page
+https://pitchh.herokuapp.com/
 ## BDD
 | Behaviour | Output |
 | :---------------- | :---------------: |
