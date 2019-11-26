@@ -1,5 +1,5 @@
 
-  <div class="navbar navbar-inverse" role="navigation" style="background-color:black; border:none; font-size:20px;">
+  <div class="navbar navbar-inverse" role="navigation" style="background-color:black; border:none; font-size:18px;">
     <div class="container-fluid">
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -8,6 +8,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
+                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
                 <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
                 {% else %}
                 <li><a href="{{url_for('auth.login')}}">Log In</a></li>

@@ -1,7 +1,8 @@
 import os
 
 class Config:
-    pass
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://christabel:bellah@1972@localhost/pitching'
+    # pass
 
 class ProdConfig(Config):
     '''
@@ -10,8 +11,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-
+    #  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
 class DevConfig(Config):
     '''
     Development  configuration child class
