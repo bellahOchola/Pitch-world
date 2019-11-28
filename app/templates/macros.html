@@ -1,4 +1,5 @@
 
+
 {% macro display(pitches) %}
 <body style=" background-repeat:no-repeat; background-size:cover; 
 background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_960_720.jpg');">
@@ -15,15 +16,19 @@ background-image:url('https://cdn.pixabay.com/photo/2015/07/02/10/13/sky-828648_
                         <p><b>Category:</b>{{categ.pitch_category}}</p>
                         <footer class="blockquote-footer"><b>Posted by:</b> {{categ.user.username}}</footer>
                         <hr>
-                        <a href="{{url_for('.comment',pitch_id = categ.id)}}" class="btn btn-primary btn-sm"> Comment</a>
+                        <span class="foot" > <a href="{{url_for('main.like',id = categ.id)}}"><i class="fa fa-thumbs-up" style="font-size:18px;color: green"></i></a> {{categ.upvote.count()}}</span>
+                        <span class="foot"> <a href="{{url_for('main.dislike',id = categ.id)}}"> <i class="fa fa-thumbs-down" style="color:red;"></i> {{categ.downvote.count()}}</a></span></div>
+									
+                        
+            <a href="{{url_for('.comment',pitch_id = categ.id)}}" class="btn btn-primary btn-sm"> Comment</a>
 
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+        </div>
     </div>
 </div>
+{% endfor %}
+</div>
+</div>
 {% endmacro %}
-	
+
 </body>
-				
+    

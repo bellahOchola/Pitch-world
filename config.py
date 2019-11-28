@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://christabel:bellah@1972@localhost/pitching'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://christabel:bellah@1972@localhost/pitching'
     # email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
@@ -16,8 +16,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    # pass
+    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    pass
 
 class DevConfig(Config):
     '''
